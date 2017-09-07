@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="/master.css">
+  <link rel="stylesheet" href="/profile.css">
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <h2>Robot LinkedIn</h2>
+  <div class="">
+    <a href="/newRobot">Register</a>
+    <a href="/signOut">Sign Out</a>
+  </div>
+
+  <div class="wrapper">
+  {{#users}}
+    <div class="profile">
+      <a href="/users/{{_id}}"><img class="avatar" src="{{avatar}}" alt=""></a>
+      <a href="/users/{{_id}}"><h2 class="name">{{name}}</h2></a>
+      <h3 class="jobCompany">
+    {{#job}}{{.}}, {{/job}}
+    {{^job}}<h3 class="available">Avaliable for hire</h3>{{/job}}
+      {{company}}
+      <h3>
+    </div>
+  {{/users}}
+  </div>
+</body>
+
+</html>
